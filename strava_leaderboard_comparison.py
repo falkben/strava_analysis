@@ -1,7 +1,10 @@
-import requests
-from multiprocessing.dummy import Pool as ThreadPool
-from functools import partial
+import json
 import pprint
+import queue
+from functools import partial
+from multiprocessing.dummy import Pool as ThreadPool
+
+import requests
 
 base = 'https://www.strava.com/api/v3'
 
@@ -16,9 +19,15 @@ def get(url, session):
     return r
 
 
+def put_responses_queue(url, session, q):
+    q.put(get(url, session))
+
+
 s = requests.Session()
 s.headers.update({'Authorization': TOKEN})
 s.stream = False
+
+get_partial = partial(get, session=s)
 
 # get ID
 athlete_url = '{}/athlete'.format(base)
@@ -54,8 +63,6 @@ act_urls = []
 for activity in activities:
     activity_url = '{}/activities/{}'.format(base, activity)
     act_urls.append(activity_url)
-
-get_partial = partial(get, session=s)
 with ThreadPool(50) as pool:
     responses = pool.map(get_partial, act_urls)
 
@@ -75,14 +82,22 @@ for seg in seg_ids:
     seg_url = '{}/segments/{}/leaderboard?{}'.format(base, seg, club_id_param)
     seg_urls.append(seg_url)
 
-print(seg_urls)
+# load the prev. loaderboard in and only attempt URLs from missing seg urls
+q = queue.Queue()
 
-with ThreadPool(50) as pool:
-    responses = pool.map(get_partial, seg_urls)
+leader_partial = partial(put_responses_queue, session=s, q=q)
+try:
+    with ThreadPool(50) as pool:
+        pool.map(leader_partial, seg_urls)
+except Exception as e:
+    print(e)
 
-seg_leaders = []
-for r in responses:
+leaderboards = []
+for r in iter(q.get, None):  # Replace `None` as you need.
     data = r.json()
-    seg_leaders.append(data)
+    leaderboards.append(data)
 
-pprint.pprint(seg_leaders)
+pprint.pprint(leaderboards)
+
+with open('leaderboards.json', 'w') as savefile:
+    json.dump(leaderboards, savefile)
