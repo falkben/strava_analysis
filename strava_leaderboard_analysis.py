@@ -12,7 +12,7 @@ with open(LEADERBOARD_URLS_FILE) as urlsfile:
     urls = [x.strip() for x in urlsfile.readlines()]
 
 
-urls_beating = []
+urls_beating = set()
 for d in data:
     athletes = d['entries']
     a_names = [a['athlete_name'] for a in athletes]
@@ -27,7 +27,7 @@ for d in data:
             seg_url = 'https://www.strava.com/segments/{}'.format(seg_id)
 
             print(seg_url)
-            urls_beating.append(seg_url)
+            urls_beating.add(seg_url)
 
 with open(BEAT_JOSH_FILE, 'w') as beat_file:
     for url in urls_beating:

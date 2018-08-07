@@ -4,6 +4,270 @@
     "entries": [
       {
         "athlete_name": "Ben F.",
+        "elapsed_time": 48,
+        "moving_time": 48,
+        "rank": 1,
+        "start_date": "2013-08-04T19:17:13Z",
+        "start_date_local": "2013-08-04T15:17:13Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/9660253/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 44,
+        "moving_time": 44,
+        "rank": 1,
+        "start_date": "2012-03-25T18:06:47Z",
+        "start_date_local": "2012-03-25T14:06:47Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/13189091/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 176,
+        "moving_time": 176,
+        "rank": 1,
+        "start_date": "2013-08-21T23:03:27Z",
+        "start_date_local": "2013-08-21T19:03:27Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/10649510/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 1388,
+        "moving_time": 1292,
+        "rank": 1,
+        "start_date": "2013-04-20T16:36:21Z",
+        "start_date_local": "2013-04-20T12:36:21Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/5216248/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 3,
+    "entries": [
+      {
+        "athlete_name": "Joshua V.",
+        "elapsed_time": 74,
+        "moving_time": 74,
+        "rank": 1,
+        "start_date": "2016-08-24T21:32:29Z",
+        "start_date_local": "2016-08-24T17:32:29Z"
+      },
+      {
+        "athlete_name": "Eric P.",
+        "elapsed_time": 95,
+        "moving_time": 95,
+        "rank": 2,
+        "start_date": "2012-10-24T19:43:22Z",
+        "start_date_local": "2012-10-24T15:43:22Z"
+      },
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 106,
+        "moving_time": 106,
+        "rank": 3,
+        "start_date": "2018-05-30T21:49:55Z",
+        "start_date_local": "2018-05-30T17:49:55Z"
+      }
+    ],
+    "entry_count": 3,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/1501160/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 645,
+        "moving_time": 645,
+        "rank": 1,
+        "start_date": "2013-07-04T10:38:32Z",
+        "start_date_local": "2013-07-04T06:38:32Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/2818023/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 265,
+        "moving_time": 265,
+        "rank": 1,
+        "start_date": "2013-08-04T18:38:56Z",
+        "start_date_local": "2013-08-04T14:38:56Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/7866288/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 3,
+    "entries": [
+      {
+        "athlete_name": "Eric P.",
+        "elapsed_time": 39,
+        "moving_time": 39,
+        "rank": 1,
+        "start_date": "2015-04-18T18:01:32Z",
+        "start_date_local": "2015-04-18T14:01:32Z"
+      },
+      {
+        "athlete_name": "Joshua V.",
+        "elapsed_time": 47,
+        "moving_time": 47,
+        "rank": 2,
+        "start_date": "2016-11-08T13:23:04Z",
+        "start_date_local": "2016-11-08T08:23:04Z"
+      },
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 67,
+        "moving_time": 67,
+        "rank": 3,
+        "start_date": "2018-06-05T21:27:08Z",
+        "start_date_local": "2018-06-05T17:27:08Z"
+      }
+    ],
+    "entry_count": 3,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/4380654/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 2,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 148,
+        "moving_time": 148,
+        "rank": 1,
+        "start_date": "2018-08-05T14:52:28Z",
+        "start_date_local": "2018-08-05T10:52:28Z"
+      },
+      {
+        "athlete_name": "Eric P.",
+        "elapsed_time": 149,
+        "moving_time": 149,
+        "rank": 2,
+        "start_date": "2018-08-05T14:52:30Z",
+        "start_date_local": "2018-08-05T10:52:30Z"
+      }
+    ],
+    "entry_count": 2,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/7821254/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 2,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 85,
+        "moving_time": 85,
+        "rank": 1,
+        "start_date": "2018-08-05T15:03:37Z",
+        "start_date_local": "2018-08-05T11:03:37Z"
+      },
+      {
+        "athlete_name": "Eric P.",
+        "elapsed_time": 86,
+        "moving_time": 86,
+        "rank": 2,
+        "start_date": "2018-08-05T15:03:38Z",
+        "start_date_local": "2018-08-05T11:03:38Z"
+      }
+    ],
+    "entry_count": 2,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/11030491/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 2,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 491,
+        "moving_time": 491,
+        "rank": 1,
+        "start_date": "2018-08-05T13:41:27Z",
+        "start_date_local": "2018-08-05T09:41:27Z"
+      },
+      {
+        "athlete_name": "Eric P.",
+        "elapsed_time": 493,
+        "moving_time": 493,
+        "rank": 2,
+        "start_date": "2018-08-05T13:41:28Z",
+        "start_date_local": "2018-08-05T09:41:28Z"
+      }
+    ],
+    "entry_count": 2,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/18257875/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 312,
+        "moving_time": 312,
+        "rank": 1,
+        "start_date": "2013-08-25T12:53:17Z",
+        "start_date_local": "2013-08-25T08:53:17Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/12222363/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
+        "elapsed_time": 36,
+        "moving_time": 36,
+        "rank": 1,
+        "start_date": "2013-07-17T23:50:48Z",
+        "start_date_local": "2013-07-17T19:50:48Z"
+      }
+    ],
+    "entry_count": 1,
+    "kom_type": null,
+    "url": "https://www.strava.com/api/v3/segments/1181628/leaderboard?club_id=289903"
+  },
+  {
+    "effort_count": 1,
+    "entries": [
+      {
+        "athlete_name": "Ben F.",
         "elapsed_time": 128,
         "moving_time": 128,
         "rank": 1,

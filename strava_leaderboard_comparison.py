@@ -13,7 +13,7 @@ LEADERBOARD_DATA_FILE = 'data/leaderboards.json'
 
 def get_token():
     with open(TOKEN_FILE, 'r') as f:
-        token_data = f.readline()
+        token_data = f.readline().strip()
     return 'Bearer {}'.format(token_data)
 
 
@@ -23,7 +23,7 @@ def get(url, session):
     return r
 
 
-def put_responses_queue(url, session, q):
+def put_resp_queue(url, session, q):
     q.put(get(url, session))
 
 
@@ -128,10 +128,10 @@ load_urls = set(lead_urls) - set(existing_urls)
 
 q = queue.Queue()
 
-lead_partial = partial(put_responses_queue, session=SESSION, q=q)
+put_resp_queue_partial = partial(put_resp_queue, session=SESSION, q=q)
 try:
     with ThreadPool(50) as pool:
-        pool.map(lead_partial, lead_urls)
+        pool.map(put_resp_queue_partial, load_urls)
 except Exception as e:
     print(e)
 
