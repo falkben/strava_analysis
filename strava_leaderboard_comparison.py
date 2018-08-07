@@ -6,9 +6,13 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 import requests
 
+TOKEN_FILE = 'token_file.txt'
+LEADERBOARD_URLS_FILE = 'data/leaderboards_urls.txt'
+LEADERBOARD_DATA_FILE = 'data/leaderboards.json'
+
 
 def get_token():
-    with open('strava_analysis/token_file.txt', 'r') as f:
+    with open(TOKEN_FILE, 'r') as f:
         token_data = f.readline()
     return 'Bearer {}'.format(token_data)
 
@@ -111,11 +115,11 @@ lead_urls = get_leaderboard_urls(seg_ids, CLUB_ID)
 existing_urls = []
 existing_data = []
 try:
-    with open('strava_analysis/data/leaderboards_urls.txt', 'r') as urlfile:
+    with open(LEADERBOARD_URLS_FILE, 'r') as urlfile:
         for line in urlfile:
             existing_urls.append(line)
         existing_urls = [x.strip() for x in existing_urls]
-    with open('strava_analysis/data/leaderboards.json', 'r') as datafile:
+    with open(LEADERBOARD_DATA_FILE, 'r') as datafile:
         existing_data = json.load(datafile)
 except:
     print('no existing data found')
@@ -144,8 +148,8 @@ for r in list(q.queue):
 existing_urls.extend(leaderboard_urls)
 leaderboards = leaderboards + existing_data
 
-with open('strava_analysis/data/leaderboards.json', 'w') as savefile:
+with open(LEADERBOARD_DATA_FILE, 'w') as savefile:
     json.dump(leaderboards, savefile, indent=2, sort_keys=True)
-with open('strava_analysis/data/leaderboards_urls.txt', 'w') as savefile:
+with open(LEADERBOARD_URLS_FILE, 'w') as savefile:
     for url in existing_urls:
         savefile.write('{}\n'.format(url))

@@ -1,10 +1,14 @@
 import json
 from pprint import pprint
 
-with open('strava_analysis/data/leaderboards.json') as leaderfile:
+LEADERBOARD_URLS_FILE = 'data/leaderboards_urls.txt'
+LEADERBOARD_DATA_FILE = 'data/leaderboards.json'
+BEAT_JOSH_FILE = 'data/segs_beating_josh.txt'
+
+with open(LEADERBOARD_DATA_FILE) as leaderfile:
     data = json.load(leaderfile)
 
-with open('strava_analysis/data/leaderboards_urls.txt') as urlsfile:
+with open(LEADERBOARD_URLS_FILE) as urlsfile:
     urls = [x.strip() for x in urlsfile.readlines()]
 
 
@@ -25,6 +29,6 @@ for d in data:
             print(seg_url)
             urls_beating.append(seg_url)
 
-with open('strava_analysis/data/segs_beating_josh.txt', 'w') as beat_file:
+with open(BEAT_JOSH_FILE, 'w') as beat_file:
     for url in urls_beating:
         beat_file.write('{}\n'.format(url))
